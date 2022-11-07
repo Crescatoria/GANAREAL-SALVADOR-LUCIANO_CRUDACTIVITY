@@ -8,8 +8,6 @@
 		private $dbname = "crudajax";
 		public $con;
 		public $studentstbl = "studentstbl";
-		public $email ="";
-		public $pw =""; 
 		public function __construct()
 		{
 			try {
