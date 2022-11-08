@@ -135,8 +135,9 @@
                 success:function(response){
                   Swal.fire({
                     icon: 'success',
-                    title: 'Customer added successfully',
+                    title: 'Student added successfully',
                   });
+                  console.log("DATA Inserted");
                   $("#addModal").modal('hide');
                   $("#formData")[0].reset();
                   showAllName();//reloads the table
@@ -170,10 +171,10 @@
           type : "POST",
           data : $("#EditformData").serialize()+"&action=update", //uses the record to get the id to call the update route in foodadd to get the sql function
           success:function(response){
-            console.log(response);
+            console.log("DATA UPDATED");
             Swal.fire({
               icon: 'success',
-              title: 'Customer updated successfully',
+              title: 'Student updated successfully',
             });
             $("#editModal").modal('hide');
             $("#EditformData")[0].reset();
@@ -200,9 +201,10 @@
           data : {deleteBtn:deleteBtn},
           success:function(response){
             tr.css('background-color','#ff6565');
+            console.log("DATA Deleted");
             Swal.fire({
               icon: 'success',
-              title: 'Customer delete successfully',
+              title: 'Student delete successfully',
             });
             showAllName();
           }
